@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/backend/">
+    <Project Path="backend/Museum.Collection.Catalog.Api/Museum.Collection.Catalog.Api.csproj" />
+    <Project Path="backend/Museum.Collection.Catalog.Application/Museum.Collection.Catalog.Application.csproj" />
+    <Project Path="backend/Museum.Collection.Catalog.Domain/Museum.Collection.Catalog.Domain.csproj" />
+    <Project Path="backend/Museum.Collection.Catalog.Infrastructure/Museum.Collection.Catalog.Infrastructure.csproj" />
+    <Project Path="backend/Museum.Collection.Catalog.Tests/Museum.Collection.Catalog.Tests.csproj" />
+  </Folder>
+</Solution>

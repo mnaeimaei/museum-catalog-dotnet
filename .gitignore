@@ -1,0 +1,57 @@
+# =========================
+# Build folders
+# =========================
+**/bin/
+**/obj/
+
+# =========================
+# User / IDE files
+# =========================
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# =========================
+# OS files
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# Test results / coverage
+# =========================
+TestResults/
+coverage/
+*.coverage
+*.coveragexml
+
+# =========================
+# Logs
+# =========================
+*.log
+
+# =========================
+# ASP.NET local secrets
+# =========================
+**/appsettings.Development.json
+
+# (Optional if you ever store secrets)
+secrets.json
+
+# =========================
+# Rider / VS Code cache
+# =========================
+_ReSharper*
+*.DotSettings.user
+
+# =========================
+# Node (if you ever add frontend later)
+# =========================
+node_modules/
+dist/

@@ -1,0 +1,238 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<artifacts>
+  <artifact>
+    <id>1b0f6b9d-9f2e-4b1e-8f7e-7a7e4d7f0b6a</id>
+    <category>Painting</category>
+    <title>The Fjord at Dawn</title>
+    <description>Oil on canvas depicting an early-morning fjord landscape with low fog and calm water.</description>
+    <accession_number>ACC-2026-0001</accession_number>
+
+    <editions>
+      <edition>
+        <id>c2a0c4a1-56b7-4b1c-8c0e-7a5e9d2ef1a4</id>
+        <artifact_guid>1b0f6b9d-9f2e-4b1e-8f7e-7a7e4d7f0b6a</artifact_guid>
+        <version>1</version>
+        <language>en-US</language>
+        <display_label>The Fjord at Dawn — Gallery Label v1</display_label>
+      </edition>
+      <edition>
+        <id>0b6b1c8d-7f7b-4a2e-9a75-0d2e3c0a9b2f</id>
+        <artifact_guid>1b0f6b9d-9f2e-4b1e-8f7e-7a7e4d7f0b6a</artifact_guid>
+        <version>1.1</version>
+        <language>en-US</language>
+        <display_label>The Fjord at Dawn — Gallery Label v1.1</display_label>
+      </edition>
+    </editions>
+  </artifact>
+
+  <artifact>
+    <id>2c9c2f4d-7a91-4f2e-8d0b-1e8a5a0d3a4f</id>
+    <category>Sculpture</category>
+    <title>Bronze Runner</title>
+    <description>Bronze sculpture capturing forward motion and balance, attributed to a mid-20th-century studio.</description>
+    <accession_number>ACC-2026-0002</accession_number>
+
+    <editions>
+      <edition>
+        <id>f2a4c3d6-4d93-4a11-9b3e-5d8e7a1c2b33</id>
+        <artifact_guid>2c9c2f4d-7a91-4f2e-8d0b-1e8a5a0d3a4f</artifact_guid>
+        <version>1</version>
+        <language>en-US</language>
+        <display_label>Bronze Runner — Gallery Label v1</display_label>
+      </edition>
+      <edition>
+        <id>9f71e2b2-3a2d-4f4f-a8b7-9a4d0b1c2e3f</id>
+        <artifact_guid>2c9c2f4d-7a91-4f2e-8d0b-1e8a5a0d3a4f</artifact_guid>
+        <version>2</version>
+        <language>en-US</language>
+        <display_label>Bronze Runner — Gallery Label v2</display_label>
+      </edition>
+      <edition>
+        <id>6a2f9d0c-1b7e-4c5a-8e2d-0f9a1c2b3d4e</id>
+        <artifact_guid>2c9c2f4d-7a91-4f2e-8d0b-1e8a5a0d3a4f</artifact_guid>
+        <version>2.1</version>
+        <language>en-US</language>
+        <display_label>Bronze Runner — Gallery Label v2.1</display_label>
+      </edition>
+    </editions>
+  </artifact>
+
+  <artifact>
+    <id>3a4f5b6c-1d2e-4f5a-8b9c-0d1e2f3a4b5c</id>
+    <category>Manuscript</category>
+    <title>Mariner’s Log, 1887</title>
+    <description>Handwritten ship log with route notes, weather observations, and cargo records.</description>
+    <accession_number>ACC-2026-0003</accession_number>
+
+    <editions>
+      <edition>
+        <id>1a2b3c4d-5e6f-4a5b-9c0d-1e2f3a4b5c6d</id>
+        <artifact_guid>3a4f5b6c-1d2e-4f5a-8b9c-0d1e2f3a4b5c</artifact_guid>
+        <version>1</version>
+        <language>en-US</language>
+        <display_label>Mariner’s Log, 1887 — Catalog Entry v1</display_label>
+      </edition>
+      <edition>
+        <id>7e8f9a0b-1c2d-4e5f-8a9b-0c1d2e3f4a5b</id>
+        <artifact_guid>3a4f5b6c-1d2e-4f5a-8b9c-0d1e2f3a4b5c</artifact_guid>
+        <version>1.2</version>
+        <language>en-US</language>
+        <display_label>Mariner’s Log, 1887 — Catalog Entry v1.2</display_label>
+      </edition>
+    </editions>
+  </artifact>
+
+  <artifact>
+    <id>4d5e6f70-8a9b-4c1d-2e3f-0a1b2c3d4e5f</id>
+    <category>Textile</category>
+    <title>Woven Tapestry Fragment</title>
+    <description>Dyed wool tapestry fragment featuring geometric patterns; provenance notes indicate late 19th century.</description>
+    <accession_number>ACC-2026-0004</accession_number>
+
+    <editions>
+      <edition>
+        <id>5c4b3a2f-1e0d-4c9b-8a7e-6f5d4c3b2a1f</id>
+        <artifact_guid>4d5e6f70-8a9b-4c1d-2e3f-0a1b2c3d4e5f</artifact_guid>
+        <version>1</version>
+        <language>en-US</language>
+        <display_label>Woven Tapestry Fragment — Gallery Label v1</display_label>
+      </edition>
+    </editions>
+  </artifact>
+
+  <artifact>
+    <id>5e6f7081-9b0c-4d1e-2f3a-1b2c3d4e5f60</id>
+    <category>Photography</category>
+    <title>Harbor Street, Winter</title>
+    <description>Gelatin silver print documenting a coastal street scene with snow and market stalls.</description>
+    <accession_number>ACC-2026-0005</accession_number>
+
+    <editions>
+      <edition>
+        <id>0a9b8c7d-6e5f-4d3c-2b1a-0f1e2d3c4b5a</id>
+        <artifact_guid>5e6f7081-9b0c-4d1e-2f3a-1b2c3d4e5f60</artifact_guid>
+        <version>2</version>
+        <language>en-US</language>
+        <display_label>Harbor Street, Winter — Exhibit Label v2</display_label>
+      </edition>
+      <edition>
+        <id>2b3c4d5e-6f70-4a8b-9c0d-1e2f3a4b5c6d</id>
+        <artifact_guid>5e6f7081-9b0c-4d1e-2f3a-1b2c3d4e5f60</artifact_guid>
+        <version>2.3</version>
+        <language>en-US</language>
+        <display_label>Harbor Street, Winter — Exhibit Label v2.3</display_label>
+      </edition>
+    </editions>
+  </artifact>
+
+  <artifact>
+    <id>6f708192-a0b1-4c2d-3e4f-2a3b4c5d6e7f</id>
+    <category>Ceramics</category>
+    <title>Blue Glaze Bowl</title>
+    <description>Hand-thrown ceramic bowl with cobalt glaze and fine crackle; likely early 1900s.</description>
+    <accession_number>ACC-2026-0006</accession_number>
+
+    <editions>
+      <edition>
+        <id>3c2b1a0f-9e8d-4c7b-6a5f-4e3d2c1b0a9f</id>
+        <artifact_guid>6f708192-a0b1-4c2d-3e4f-2a3b4c5d6e7f</artifact_guid>
+        <version>1</version>
+        <language>en-US</language>
+        <display_label>Blue Glaze Bowl — Catalog Entry v1</display_label>
+      </edition>
+    </editions>
+  </artifact>
+
+  <artifact>
+    <id>7a8192a3-b1c2-4d3e-4f50-3b4c5d6e7f80</id>
+    <category>Map</category>
+    <title>Coastal Survey Chart</title>
+    <description>Printed nautical chart showing depth soundings and coastal markers; includes handwritten annotations.</description>
+    <accession_number>ACC-2026-0007</accession_number>
+
+    <editions>
+      <edition>
+        <id>4d5e6f70-1234-4abc-9def-0123456789ab</id>
+        <artifact_guid>7a8192a3-b1c2-4d3e-4f50-3b4c5d6e7f80</artifact_guid>
+        <version>3</version>
+        <language>en-US</language>
+        <display_label>Coastal Survey Chart — Exhibit Label v3</display_label>
+      </edition>
+      <edition>
+        <id>5e6f7081-2345-4bcd-8efa-1234567890bc</id>
+        <artifact_guid>7a8192a3-b1c2-4d3e-4f50-3b4c5d6e7f80</artifact_guid>
+        <version>3.1</version>
+        <language>en-US</language>
+        <display_label>Coastal Survey Chart — Exhibit Label v3.1</display_label>
+      </edition>
+    </editions>
+  </artifact>
+
+  <artifact>
+    <id>8b92a3b4-c2d3-4e4f-5061-4c5d6e7f8091</id>
+    <category>Jewelry</category>
+    <title>Silver Brooch with Filigree</title>
+    <description>Ornamental silver brooch featuring filigree and floral motifs; craftsmanship suggests regional tradition.</description>
+    <accession_number>ACC-2026-0008</accession_number>
+
+    <editions>
+      <edition>
+        <id>6f708192-3456-4cde-9fab-2345678901cd</id>
+        <artifact_guid>8b92a3b4-c2d3-4e4f-5061-4c5d6e7f8091</artifact_guid>
+        <version>1</version>
+        <language>en-US</language>
+        <display_label>Silver Brooch with Filigree — Gallery Label v1</display_label>
+      </edition>
+      <edition>
+        <id>708192a3-4567-4def-8abc-3456789012de</id>
+        <artifact_guid>8b92a3b4-c2d3-4e4f-5061-4c5d6e7f8091</artifact_guid>
+        <version>1.1</version>
+        <language>en-US</language>
+        <display_label>Silver Brooch with Filigree — Gallery Label v1.1</display_label>
+      </edition>
+    </editions>
+  </artifact>
+
+  <artifact>
+    <id>9c0d1e2f-3a4b-4c5d-6e7f-8091a2b3c4d5</id>
+    <category>Print</category>
+    <title>City Market Poster</title>
+    <description>Color lithograph poster advertising a seasonal city market; includes typographic ornaments.</description>
+    <accession_number>ACC-2026-0009</accession_number>
+
+    <editions>
+      <edition>
+        <id>8192a3b4-5678-4abc-9def-4567890123ef</id>
+        <artifact_guid>9c0d1e2f-3a4b-4c5d-6e7f-8091a2b3c4d5</artifact_guid>
+        <version>2</version>
+        <language>en-US</language>
+        <display_label>City Market Poster — Catalog Entry v2</display_label>
+      </edition>
+    </editions>
+  </artifact>
+
+  <artifact>
+    <id>0d1e2f3a-4b5c-4d6e-7f80-91a2b3c4d5e6</id>
+    <category>Audio</category>
+    <title>Oral History Recording: Dockworkers</title>
+    <description>Digitized oral history interview discussing dock work and harbor life in the early 20th century.</description>
+    <accession_number>ACC-2026-0010</accession_number>
+
+    <editions>
+      <edition>
+        <id>92a3b4c5-6789-4bcd-8efa-5678901234f0</id>
+        <artifact_guid>0d1e2f3a-4b5c-4d6e-7f80-91a2b3c4d5e6</artifact_guid>
+        <version>1</version>
+        <language>en-US</language>
+        <display_label>Oral History Recording: Dockworkers — Metadata v1</display_label>
+      </edition>
+      <edition>
+        <id>a3b4c5d6-7890-4cde-9fab-6789012345a1</id>
+        <artifact_guid>0d1e2f3a-4b5c-4d6e-7f80-91a2b3c4d5e6</artifact_guid>
+        <version>1.2</version>
+        <language>en-US</language>
+        <display_label>Oral History Recording: Dockworkers — Metadata v1.2</display_label>
+      </edition>
+    </editions>
+  </artifact>
+</artifacts>
