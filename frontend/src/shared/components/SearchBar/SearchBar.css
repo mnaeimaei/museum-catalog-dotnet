@@ -1,0 +1,13 @@
+/* frontend/src/shared/components/SearchBar/SearchBar.css */
+
+.search-bar {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.search-bar input {
+  padding: 6px 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}

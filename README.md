@@ -1,25 +1,26 @@
-# Museum Collection Catalog API
+# Museum Collection Catalog
 
-A Clean Architecture ASP.NET Core Web API for managing museum artifacts and their exhibit editions.
+The **Museum Collection Catalog** is a web-based application composed of a backend API and a frontend client. It is designed to support museums in organizing, managing, and presenting information about their collections in a structured and consistent manner.
 
-This project demonstrates:
-
-* Clean Architecture (Api / Domain / Infrastructure / Tests)
-* Repository Pattern
-* XML-based persistence
-* Pagination, Sorting, Filtering
-* xUnit test coverage
-* RESTful API design with Swagger
+The system enables institutions to catalog artifacts, maintain descriptive metadata, and manage multiple exhibit editions associated with each artifact.
 
 ---
 
-# Domain Concept
+## Artifact Concept
 
-This system models a museum cataloging platform.
+Within this system, an **artifact** refers to a formally cataloged object that belongs to a museum’s collection. An artifact may represent a physical, historical, or cultural object such as a painting, sculpture, manuscript, map, textile, piece of jewelry, audio recording, or any other item of cultural significance preserved by the institution.
 
-Each **Artifact** can have multiple **Editions** (e.g., gallery labels, exhibit versions, translations).
+Each artifact is associated with structured metadata (e.g., title, category, accession number, and description) and may include multiple **editions**. Editions represent different exhibition labels, catalog versions, translations, or interpretative materials prepared for display or publication.
 
-### Artifact Structure
+Each **Artifact** can have multiple **Editions**, for example:
+
+* Gallery labels
+* Exhibit versions
+* Language translations
+
+---
+
+### Artifacts Conceptual Model
 
 ```text
 artifact
@@ -38,87 +39,148 @@ artifact
 
 ---
 
-# Architecture
-
-```
-Museum.Collection.Catalog
- ├── Api              → Controllers & API configuration
- ├── Domain           → Entities & Interfaces
- ├── Infrastructure   → XML Repository implementation
- └── Tests            → xUnit tests
-```
-
-The system follows:
-
-* Clean separation of concerns
-* Dependency inversion
-* Repository abstraction
-* Infrastructure-driven persistence
-
----
-
 # Features
 
-## List Artifacts (Paged)
+The Museum Collection Catalog API provides structured access to artifact data with the following capabilities:
 
-Returns:
-
-* id
-* category
-* title
-* accession_number
-
-Supports:
-
-* Pagination
-* Sorting
-* Filtering
+* **Paginated listing of artifacts**, returning core fields (id, category, title, accession number).
+* **Sorting support** by title, category, or accession number (ascending or descending).
+* **Flexible filtering** using partial matches on title and accession number.
+* **Detailed artifact retrieval** by identifier, including full metadata and associated editions (version and language information).
+* **Optional edition retrieval**, allowing access to a specific edition of an artifact via its unique identifier.
 
 ---
 
-## Sorting
+# Backend API Architecture
 
-Supports sorting by:
+The backend is implemented as a **Clean Architecture–based ASP.NET Core Web API**.
 
-* title
-* category
-* accession_number
+The architectural design emphasizes:
 
-Ascending or descending.
+* Clear separation of concerns
+* Dependency inversion
+* Repository abstraction
+* Infrastructure-based persistence
+* SOLID principles
+* REST API best practices
+* Testability and maintainability
 
----
+### Technology Stack
 
-## Filtering
+* .NET 10
+* ASP.NET Core Web API
+* Swagger (Swashbuckle)
+* xUnit
+* XML Serialization
+* LINQ
 
-Supports partial match filtering by:
+### Backend Structure
 
-* title
-* accessionNumber
-
----
-
-## Get Artifact by Id
-
-Returns full details including:
-
-* description
-* editions (with version and language)
-
----
-
-## Optional: Get Specific Edition
-
-Fetch a specific edition using:
-
-```
-/api/artifacts/{artifactId}/editions/{editionId}
+```text
+backend
+ ├── Api              → Controllers and API configuration
+ ├── Domain           → Core entities and interfaces
+ ├── Infrastructure   → XML-based repository implementation
+ └── Tests            → xUnit test project
 ```
 
+The artifact data file (`artifacts.xml`) is located in:
+
+```
+backend/Museum.Collection.Catalog.Infrastructure/Data
+```
+
+This structure ensures maintainability, extensibility, and testability of the system.
+
 ---
 
-# How to Run the Backend
+# Frontend Web Application Architecture
 
-From the terminal:
+The frontend is implemented as a **React-based Single Page Application (SPA)**.
+
+It provides a user interface for:
+
+* Browsing artifacts
+* Viewing artifact details and editions
+* Searching and sorting catalog entries
+
+### Frontend Structure
+
+```text
+└── frontend
+    ├── node_modules
+    ├── public
+    │   └── vite.svg
+    ├── src
+    │   ├── index.css
+    │   ├── main.jsx
+    │   ├── assets
+    │   │   └── react.svg
+    │   ├── app
+    │   │   ├── App.jsx
+    │   │   ├── routes.jsx
+    │   │   ├── layout
+    │   │       ├── AppLayout.css
+    │   │       ├── AppLayout.jsx
+    │   │       ├── HomeLayout.css
+    │   │       └── HomeLayout.jsx
+    │   ├── features
+    │   │   ├── ArtifactsPage
+    │   │   │   └── ArtifactsPage.jsx
+    │   │   ├── ArtifactDetailsPage
+    │   │   │   └── ArtifactDetailsPage.jsx
+    │   │   └── pagesAPI
+    │   │       └── pages.api.js
+    │   └── shared
+    │       ├── components
+    │           ├── Artifact (Artifact.css, Artifact.jsx, index.js)
+    │           ├── ArtifactCard (ArtifactCard.css, ArtifactCard.jsx, index.js)
+    │           ├── SortControls (SortControls.css, SortControls.jsx, index.js)
+    │           ├── SearchBar (SearchBar.css, SearchBar.jsx, index.js)
+    │           ├── Button
+    │           └── Navbar
+    ├── eslint.config.js
+    ├── index.html
+    ├── package.json
+    ├── package-lock.json
+    └── README.md
+```
+
+The frontend follows a modular, feature-based structure separating layout components, shared UI elements, and domain-specific features.
+
+---
+
+# How to Run the Backend API
+
+## 1) Clone the Repository
+
+```bash
+git clone git@github.com:mnaeimaei/museum-catalog-api.git
+```
+
+or
+
+```bash
+git clone https://github.com/mnaeimaei/museum-catalog-api.git
+```
+
+---
+
+## 2) Install .NET SDK
+
+Download the .NET SDK from:
+
+[https://dotnet.microsoft.com/download](https://dotnet.microsoft.com/download)
+
+Verify installation:
+
+```bash
+dotnet --version
+```
+
+---
+
+## 3) Run the API
 
 ```bash
 cd backend/Museum.Collection.Catalog.Api
@@ -200,53 +262,25 @@ http://localhost:5052/api/artifacts/1b0f6b9d-9f2e-4b1e-8f7e-7a7e4d7f0b6a/edition
 
 ---
 
-# Running Tests
+# How to Use the Web Application
+
+
+
+The frontend application can run only if the backend application is running.  
+After making sure that the backend application is running, open another terminal:
+
 
 ```bash
-cd backend/Museum.Collection.Catalog.Tests
-dotnet test
+cd src
+cd microchip.interview.web
+npm run dev
 ```
 
----
 
-# Persistence
 
-Artifacts are stored in:
+Then the React-based app can be opened in a browser tab:
 
+
+```text
+http://localhost:5173/
 ```
-Infrastructure/Data/artifacts.xml
-```
-
-The system uses `XmlSerializer` for data loading and in-memory querying.
-
----
-
-# Why This Project?
-
-This project showcases:
-
-* Strong C# and ASP.NET Core fundamentals
-* Clean Architecture implementation
-* SOLID principles
-* Repository pattern
-* REST API best practices
-* Test-driven structure
-* Separation between domain and infrastructure
-
----
-
-# Tech Stack
-
-* .NET 10
-* ASP.NET Core Web API
-* Swagger (Swashbuckle)
-* xUnit
-* XML Serialization
-* LINQ
-
----
-
-# Author
-
-Milad Naeimaei
-ASP.NET Core | Clean Architecture | Software Engineering

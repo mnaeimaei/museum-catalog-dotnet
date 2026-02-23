@@ -1,0 +1,12 @@
+/* frontend/src/shared/components/Artifact/Artifact.css */
+
+
+.artifact-details {
+  padding: 20px;
+  line-height: 1.6;
+}
+
+.artifact-details ul {
+  margin-top: 10px;
+  padding-left: 20px;
+}

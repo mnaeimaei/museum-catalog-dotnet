@@ -1,0 +1,12 @@
+/* frontend/src/shared/components/SortControls/SortControls.css */
+
+.sort-controls {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.sort-controls select {
+  padding: 6px;
+  border-radius: 5px;
+}

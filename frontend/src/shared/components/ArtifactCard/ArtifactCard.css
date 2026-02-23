@@ -1,0 +1,14 @@
+/* frontend/src/shared/components/ArtifactCard/ArtifactCard.css */
+
+.artifact-card {
+  border: 1px solid #ddd;
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.artifact-card:hover {
+  background-color: #f5f5f5;
+}

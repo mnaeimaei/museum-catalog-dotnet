@@ -1,0 +1,30 @@
+/* frontend/src/app/layout/AppLayout.css */
+
+
+.app-layout {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background: #222;
+  padding: 16px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header nav a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+.header nav a:hover {
+  text-decoration: underline;
+}
+
+.content {
+  padding: 20px;
+}
