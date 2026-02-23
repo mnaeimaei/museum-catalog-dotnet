@@ -271,8 +271,7 @@ After making sure that the backend application is running, open another terminal
 
 
 ```bash
-cd src
-cd microchip.interview.web
+cd frontend
 npm run dev
 ```
 
