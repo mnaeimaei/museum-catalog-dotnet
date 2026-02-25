@@ -79,6 +79,7 @@ The architectural design emphasizes:
 ```text
 backend
  ├── Api              → Controllers and API configuration
+ ├── Application      → Use cases (orchestration layer)
  ├── Domain           → Core entities and interfaces
  ├── Infrastructure   → XML-based repository implementation
  └── Tests            → xUnit test project
