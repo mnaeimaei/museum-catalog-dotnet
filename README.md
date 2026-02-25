@@ -77,12 +77,19 @@ The architectural design emphasizes:
 ### Backend Structure
 
 ```text
-backend
- ├── Api              → Controllers and API configuration
- ├── Application      → Use cases (orchestration layer)
- ├── Domain           → Core entities and interfaces
- ├── Infrastructure   → XML-based repository implementation
- └── Tests            → xUnit test project
+backend/
+│
+├── Museum.Catalog.sln
+│
+├── src/
+│   ├── Museum.Catalog.Api/                → Controllers and API configuration
+│   ├── Museum.Catalog.Application/        → Use cases (orchestration layer)
+│   ├── Museum.Catalog.Infrastructure/     → XML-based repository implementation
+│   └── Museum.Catalog.Domain/             → Core entities and interfaces    
+│
+└── tests/
+    ├── Museum.Catalog.UnitTests/          → Isolated tests 
+    └── Museum.Catalog.IntegrationTests/   → End-to-end tests
 ```
 
 The artifact data file (`artifacts.xml`) is located in:
