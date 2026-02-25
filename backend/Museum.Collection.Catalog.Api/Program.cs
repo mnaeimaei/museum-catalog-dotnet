@@ -1,6 +1,4 @@
-
-//Program.cs
-
+using Museum.Collection.Catalog.Application.Services;
 using Museum.Collection.Catalog.Domain.Interfaces;
 using Museum.Collection.Catalog.Infrastructure.Repositories;
 
@@ -20,15 +18,18 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-// IMPORTANT: Your XML is in Infrastructure/Data/artifacts.xml (not Api/Data)
-// ContentRootPath is the API project folder, so we go up one level to backend root, then to Infrastructure/Data.
+// XML path (your existing logic)
 var xmlPath = Path.GetFullPath(
     Path.Combine(builder.Environment.ContentRootPath, "..", "Museum.Collection.Catalog.Infrastructure", "Data", "artifacts.xml")
 );
 
 Console.WriteLine("LOADING XML FROM: " + xmlPath);
 
+// Repo in Infrastructure
 builder.Services.AddSingleton<IArtifactRepository>(_ => new XmlArtifactRepository(xmlPath));
+
+// Service in Application
+builder.Services.AddScoped<IArtifactService, ArtifactService>();
 
 var app = builder.Build();
 
