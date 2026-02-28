@@ -163,13 +163,13 @@ The frontend follows a modular, feature-based structure separating layout compon
 ## 1) Clone the Repository
 
 ```bash
-git clone git@github.com:mnaeimaei/museum-catalog-api.git
+git clone git@github.com:mnaeimaei/museum-catalog-dotnet.git
 ```
 
 or
 
 ```bash
-git clone https://github.com/mnaeimaei/museum-catalog-api.git
+git clone https://github.com/mnaeimaei/museum-catalog-dotnet.git
 ```
 
 ---
