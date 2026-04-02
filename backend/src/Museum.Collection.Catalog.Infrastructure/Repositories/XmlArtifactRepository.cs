@@ -1,9 +1,6 @@
-﻿//XmlArtifactRepository.cs
-using System.Linq.Expressions;
-using System.Xml.Serialization;
+﻿using System.Linq.Expressions;
 using Museum.Collection.Catalog.Domain.Entities;
 using Museum.Collection.Catalog.Domain.Interfaces;
-using Museum.Collection.Catalog.Infrastructure.XmlModels;
 
 namespace Museum.Collection.Catalog.Infrastructure.Repositories;
 
@@ -13,43 +10,9 @@ public sealed class XmlArtifactRepository : IArtifactRepository
 
     public XmlArtifactRepository(string xmlFilePath)
     {
-        if (!File.Exists(xmlFilePath))
-            throw new FileNotFoundException("artifacts.xml not found.", xmlFilePath);
-    
-        // XML parser + deserializer: configured to convert XML into ArtifactsDocumentXml objects
-        var serializer = new XmlSerializer(typeof(ArtifactsDocumentXml));
-    
-        using var stream = File.OpenRead(xmlFilePath);
-    
-        // Deserialize XML file:
-        // - Parses the XML structure
-        // - Deserializes it into persistence models (ArtifactsDocumentXml, ArtifactXml, ArtifactEditionXml)
-        var document = (ArtifactsDocumentXml?)serializer.Deserialize(stream)
-            ?? throw new InvalidOperationException("Invalid artifacts XML format.");
-    
-        _artifacts = (document.Items ?? new List<ArtifactXml>())
-            .Select(ToDomain)
-            .ToList();
+        var dataSource = new XmlArtifactDataSource(xmlFilePath);
+        _artifacts = dataSource.LoadArtifacts();
     }
-
-    private static Artifact ToDomain(ArtifactXml x) => new()     //mapping persistance model (XMLModels) to domain Entities (Entities)
-    {
-        Id = x.Id,
-        Category = x.Category,
-        Title = x.Title,
-        Description = x.Description,
-        AccessionNumber = x.AccessionNumber,
-        Editions = (x.Editions ?? new List<ArtifactEditionXml>())
-            .Select(e => new ArtifactEdition
-            {
-                Id = e.Id,
-                ArtifactGuid = e.ArtifactGuid,
-                Version = e.Version,
-                Language = e.Language,
-                DisplayLabel = e.DisplayLabel
-            })
-            .ToList()
-    };
 
     public Task<Artifact?> SingleAsync(Guid id)
         => Task.FromResult(_artifacts.SingleOrDefault(a => a.Id == id));
@@ -64,19 +27,23 @@ public sealed class XmlArtifactRepository : IArtifactRepository
 
     public Task<IReadOnlyList<Artifact>> GetByCategoryAsync(string category)
     {
-        category ??= "";
+        category ??= string.Empty;
+
         var result = _artifacts
             .Where(a => a.Category.Equals(category, StringComparison.OrdinalIgnoreCase))
             .ToList();
+
         return Task.FromResult((IReadOnlyList<Artifact>)result);
     }
 
     public Task<IReadOnlyList<Artifact>> GetByAccessionNumberAsync(string accessionNumber)
     {
-        accessionNumber ??= "";
+        accessionNumber ??= string.Empty;
+
         var result = _artifacts
             .Where(a => a.AccessionNumber.Equals(accessionNumber, StringComparison.OrdinalIgnoreCase))
             .ToList();
+
         return Task.FromResult((IReadOnlyList<Artifact>)result);
     }
 
@@ -84,6 +51,7 @@ public sealed class XmlArtifactRepository : IArtifactRepository
     {
         var artifact = _artifacts.SingleOrDefault(a => a.Id == artifactId);
         var edition = artifact?.Editions.SingleOrDefault(e => e.Id == editionId);
+
         return Task.FromResult(edition);
     }
 }
