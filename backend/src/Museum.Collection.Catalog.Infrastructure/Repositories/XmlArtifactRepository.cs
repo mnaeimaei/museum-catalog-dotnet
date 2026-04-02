@@ -28,7 +28,7 @@ public sealed class XmlArtifactRepository : IArtifactRepository
             .ToList();
     }
 
-    private static Artifact ToDomain(ArtifactXml x) => new()
+    private static Artifact ToDomain(ArtifactXml x) => new()     //mapping persistance model (XMLModels) to domain Entities (Entities)
     {
         Id = x.Id,
         Category = x.Category,
