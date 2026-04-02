@@ -29,7 +29,7 @@ public sealed class ArtifactsController : ControllerBase
     [HttpGet("{id:guid}/editions/{editionId:guid}")]
     public async Task<IActionResult> GetEdition(Guid id, Guid editionId)
     {
-        var dto = await _service.GetEditionAsync(id, editionId);
+        var dto = await _service.GetEditionDtoAsync(id, editionId);
         return dto is null ? NotFound() : Ok(dto);
     }
 }

@@ -59,7 +59,7 @@ public sealed class ArtifactService : IArtifactService
         return artifact?.ToDetailsDto();
     }
 
-    public async Task<ArtifactEditionDto?> GetEditionAsync(Guid artifactId, Guid editionId)
+    public async Task<ArtifactEditionDto?> GetEditionDtoAsync(Guid artifactId, Guid editionId)
     {
         var edition = await _repo.GetEditionAsync(artifactId, editionId);
         return edition?.ToEditionDto();
