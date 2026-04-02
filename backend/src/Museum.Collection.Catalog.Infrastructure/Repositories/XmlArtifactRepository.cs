@@ -15,14 +15,18 @@ public sealed class XmlArtifactRepository : IArtifactRepository
     {
         if (!File.Exists(xmlFilePath))
             throw new FileNotFoundException("artifacts.xml not found.", xmlFilePath);
-
+    
+        // XML parser + deserializer: configured to convert XML into ArtifactsDocumentXml objects
         var serializer = new XmlSerializer(typeof(ArtifactsDocumentXml));
-
+    
         using var stream = File.OpenRead(xmlFilePath);
-
+    
+        // Deserialize XML file:
+        // - Parses the XML structure
+        // - Deserializes it into persistence models (ArtifactsDocumentXml, ArtifactXml, ArtifactEditionXml)
         var document = (ArtifactsDocumentXml?)serializer.Deserialize(stream)
             ?? throw new InvalidOperationException("Invalid artifacts XML format.");
-
+    
         _artifacts = (document.Items ?? new List<ArtifactXml>())
             .Select(ToDomain)
             .ToList();
